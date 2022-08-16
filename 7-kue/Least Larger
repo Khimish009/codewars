@@ -1,0 +1,19 @@
+# https://www.codewars.com/kata/5f8341f6d030dc002a69d7e4/train/javascript
+
+function leastLarger(a, i) {
+  let smaller = Infinity
+  let result = -1
+
+  a.forEach((value, index, array) => {
+    if (value > array[i] && value < smaller) {
+      smaller = value
+      result = index
+    }
+  })
+
+  return result
+}
+
+another solution!!!
+
+const leastLarger = (a,i) => a.indexOf(Math.min(...a.filter(item => item > a[i])))
